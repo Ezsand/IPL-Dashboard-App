@@ -59,8 +59,12 @@ class TeamMatches extends Component {
     const {teamBannerUrl, latestMatchDetails} = matchesData
     return (
       <div className="team-matches-container">
-        <img src={teamBannerUrl} alt="img" className="team-banner" />
+        <img src={teamBannerUrl} alt="team banner" className="team-banner" />
         <LatestMatch latestMatch={latestMatchDetails} />
+        <p className="competing-team">
+          {latestMatchDetails.competingTeam}
+        </p>{' '}
+        {/* Competing team displayed here */}
         {this.renderRecentMatchesList()}
       </div>
     )
